@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>page 2</title>
+</head>
+<body bgcolor="#HDFC">
+    <h1 align="center">YOUR DETAILS</h1>
+    <table  align="center" border="0" bgcolor="#FFFFCC" width="500" height="200" vspace="5"
+     style="font-size: large; color: rgb(173, 10, 86); padding-bottom: 10px; padding-left: 30px;"><tr><td>
+    <div id="myData"></div>
+    <script>
+        fetch('details.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+        function appendData(data) {
+            var mainContainer = document.getElementById("myData");
+            for (var i = 0; i < data.length; i++) {
+                var div = document.createElement("div");
+                div.innerHTML = '<b>Name </b>  : ' + data[i].name;
+                mainContainer.appendChild(div);
+
+                var div = document.createElement("div");
+                div.innerHTML = '<b>Age</b>    : ' + data[i].age;
+                mainContainer.appendChild(div);
+
+                var div = document.createElement("div");
+                div.innerHTML = '<b>Gender</b> : ' + data[i].gender;
+                mainContainer.appendChild(div);
+
+                var div = document.createElement("div");
+                div.innerHTML = '<b>DOB</b>    : ' + data[i].dob;
+                mainContainer.appendChild(div);
+
+                var div = document.createElement("div");
+                div.innerHTML = '<b>Address:</b> ' + data[i].address;
+            }   mainContainer.appendChild(div);
+        }
+    </script>
+    </td></tr></table>
+</body>
+</html>
