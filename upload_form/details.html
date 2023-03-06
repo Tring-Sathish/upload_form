@@ -1,28 +1,26 @@
-<html>
+<!DOCTYPE>
+<html lang="EN" xml:lang="en">
     <head>
         <title>page 1</title>
     </head>
     <style>
         body {
-            background-color: #HDFC;
-            align: center;
+            background-color: blue;
         }
         table {
-            align : center;
             border: 0;
-            frame : box;
-            cellspacing: 0;
             width : 500; 
             height :250;
             background-color:#FFFFCC;
         }
-        tr, td {
-            align: center;
+        th, caption {
+            display : none;
         }
     </style>
     <body>
-        <h1><big>Fill The Details</big></h1>
+        <h1>Fill The Details</h1>
         <table>
+            <caption></caption>
         <form action="display.html">
             <tr><td>
             <label for="image" >Upload Image</label>
@@ -35,6 +33,7 @@
             <tr><td>
                 <input type="submit" value="Submit" id="submit">
             </td>
+                <th id="th"></th>
             </tr>
         </form>
         </table>    
