@@ -37,26 +37,23 @@
                 console.log('error: ' + err);
             });
         function appendData(data) {
-            var mainContainer = document.getElementById("myData");
-//             for (var i = 0; i < data.length; i++)
+            let mainContainer = document.getElementById("myData");
+            let div = document.createElement("div");
+
                 for (let ele of data) {
-                var div = document.createElement("div");
+                
                 div.innerHTML = '<b>Name </b>  : ' + ele.name;
                 mainContainer.appendChild(div);
 
-//                 var div = document.createElement("div");
                 div.innerHTML = '<b>Age</b>    : ' + ele.age;
                 mainContainer.appendChild(div);
 
-//                 var div = document.createElement("div");
                 div.innerHTML = '<b>Gender</b> : ' + ele.gender;
                 mainContainer.appendChild(div);
 
-//                 var div = document.createElement("div");
                 div.innerHTML = '<b>DOB</b>    : ' + ele.dob;
                 mainContainer.appendChild(div);
 
-//                 var div = document.createElement("div");
                 div.innerHTML = '<b>Address:</b> ' + ele.address;
             }   mainContainer.appendChild(div);
         }
