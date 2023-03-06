@@ -38,25 +38,26 @@
             });
         function appendData(data) {
             var mainContainer = document.getElementById("myData");
-            for (var i = 0; i < data.length; i++) {
+//             for (var i = 0; i < data.length; i++)
+                for (let ele of data) {
                 var div = document.createElement("div");
-                div.innerHTML = '<b>Name </b>  : ' + data[i].name;
+                div.innerHTML = '<b>Name </b>  : ' + ele.name;
                 mainContainer.appendChild(div);
 
-                var div = document.createElement("div");
-                div.innerHTML = '<b>Age</b>    : ' + data[i].age;
+//                 var div = document.createElement("div");
+                div.innerHTML = '<b>Age</b>    : ' + ele.age;
                 mainContainer.appendChild(div);
 
-                var div = document.createElement("div");
-                div.innerHTML = '<b>Gender</b> : ' + data[i].gender;
+//                 var div = document.createElement("div");
+                div.innerHTML = '<b>Gender</b> : ' + ele.gender;
                 mainContainer.appendChild(div);
 
-                var div = document.createElement("div");
-                div.innerHTML = '<b>DOB</b>    : ' + data[i].dob;
+//                 var div = document.createElement("div");
+                div.innerHTML = '<b>DOB</b>    : ' + ele.dob;
                 mainContainer.appendChild(div);
 
-                var div = document.createElement("div");
-                div.innerHTML = '<b>Address:</b> ' + data[i].address;
+//                 var div = document.createElement("div");
+                div.innerHTML = '<b>Address:</b> ' + ele.address;
             }   mainContainer.appendChild(div);
         }
     </script>
