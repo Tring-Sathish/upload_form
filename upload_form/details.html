@@ -2,19 +2,37 @@
     <head>
         <title>page 1</title>
     </head>
-    <body bgcolor="#HDFC" align="center">
+    <style>
+        body {
+            background-color: #HDFC;
+            align: center;
+        }
+        table {
+            align : center;
+            border: 0;
+            frame : box;
+            cellspacing: 0;
+            width : 500; 
+            height :250;
+            background-color:#FFFFCC;
+        }
+        tr, td {
+            align: center;
+        }
+    </style>
+    <body>
         <h1><big>Fill The Details</big></h1>
-        <table align="center" border="0" frame="box" cellspacing="0" width="500" height="250" bgcolor="#FFFFCC">
+        <table>
         <form action="display.html">
-            <tr align="center"><td align="center">
+            <tr><td>
             <label for="image" >Upload Image</label>
             <input type="file"  accept="image/*" name="image" id="image"/>
             </td></tr>
-            <tr><td align="center">
+            <tr><td>
             <label for="details">Upload Details</label>
             <input type="file" id="details" name="details">
             </td></tr>
-            <tr><td align="Center">
+            <tr><td>
                 <input type="submit" value="Submit" id="submit">
             </td>
             </tr>
